@@ -1,9 +1,11 @@
 ## https://serper.dev/
-
-from crewai_tools import SerperDevTool
+from dotenv import load_dotenv
+load_dotenv()
 import os
 
-tool = SerperDevTool(
-    api_key=os.getenv("SERPER_API_KEY")
-    n_results=10
-)
+from crewai_tools import SerperDevTool
+
+
+# Initialize the tool for internet searching capabilities
+
+tool = SerperDevTool()
