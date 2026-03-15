@@ -16,8 +16,8 @@ def create_agents():
         role="Senior News Researcher",
         goal="Find the latest real news articles from the internet",
         backstory=(
-            "You are an investigative journalist who always uses search tools."
-            "to gather verified information and sources."
+    "You are an investigative journalist who always uses search tools "
+    "to gather verified information and reliable sources."
         ),
         tools=[tool],
         allow_delegation=False,
@@ -30,6 +30,7 @@ def create_agents():
         goal="Verify the accuracy of news sources and remove misinformation",
         backstory="You verify credibility of news reports.",
         verbose=True,
+        allow_delegation=False,
         llm=llm
     )
 
@@ -38,6 +39,7 @@ def create_agents():
         goal="Write a professional news article using verified sources",
         backstory="You write articles similar to BBC or Reuters.",
         verbose=True,
+        allow_delegation=False,
         llm=llm
     )
 
@@ -45,6 +47,7 @@ def create_agents():
         role="News Summarizer",
         goal="Summarize the article in bullet points",
         verbose=True,
+        allow_delegation=False,
         llm=llm
     )
 
