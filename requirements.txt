@@ -1,0 +1,11 @@
+streamlit
+crewai
+google-generativeai
+python-dotenv
+langchain
+langchain-community
+crewai-tools
+langchain-google-genai
+plotly
+textblob
+streamlit-extras
