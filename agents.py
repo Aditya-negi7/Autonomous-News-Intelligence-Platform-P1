@@ -44,11 +44,15 @@ def create_agents():
     )
 
     summary_agent = Agent(
-        role="News Summarizer",
-        goal="Summarize the article in bullet points",
-        verbose=True,
-        allow_delegation=False,
-        llm=llm
-    )
+    role="News Summarizer",
+    goal="Summarize the article in bullet points",
+    backstory=(
+        "You are an expert editor who converts long news articles into "
+        "clear and concise bullet point summaries."
+    ),
+    allow_delegation=False,
+    verbose=True,
+    llm=llm
+)
 
     return research_agent, fact_checker, writer_agent, summary_agent
